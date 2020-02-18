@@ -1,0 +1,11 @@
+{% if categories %}
+    <div class="container">
+        <ul class="desktop-categories">
+            {% for category in categories %}
+                <li class="category-point">
+                    <a href="{{ category.href }}">{{ category.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %} 
