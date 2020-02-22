@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']    = 'Category';
+$_['heading_title']    = 'Custom Category';
 
 // Text
 $_['text_extension']   = 'Extensions';

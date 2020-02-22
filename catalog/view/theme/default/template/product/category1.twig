@@ -28,22 +28,34 @@
                 <h3>{{ text_refine }}</h3>
                 {% if categories|length <= 5 %}
                     <div class="subcategories-row row">
-                        <div class="col-sm-3">
-                            <ul>
+                        <div class="col-md-3 col-sm-4 col-xs-6">
+                            <div class="subcategories-grid">
                                 {% for category in categories %}
-                                    <li><a href="{{ category.href }}">{{ category.name }}</a></li>
+                                    <a href="{{ category.href }}" class="subcategory-cube" title="{{ category.name }}">
+                                        {% if category.image %}
+                                            <img src="{{ category.image }}" alt="{{ category.name }}" class="img-fluid">
+                                        {% else %}
+                                            <span>{{ category.name }}</span>
+                                        {% endif %}
+                                    </a>
                                 {% endfor %}
-                            </ul>
+                            </div>
                         </div>
                     </div>
                 {% else %}
                     <div class="subcategories-row row">{% for category in categories|batch((categories|length / 4)|round(1, 'ceil')) %}
-                            <div class="col-sm-3">
-                                <ul>
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <div class="subcategories-grid">
                                     {% for child in category %}
-                                        <li><a href="{{ child.href }}">{{ child.name }}</a></li>
+                                        <a href="{{ child.href }}" class="subcategory-cube" title="{{ child.name }}">
+                                            {% if child.image %}
+                                                <img src="{{ child.image }}" alt="{{ child.name }}" class="img-fluid">
+                                            {% else %}
+                                                <span>{{ child.name }}</span>
+                                            {% endif %}
+                                        </a>
                                     {% endfor %}
-                                </ul>
+                                </div>
                             </div>
                         {% endfor %}</div>
                     <br />

@@ -1,0 +1,15 @@
+<div class="custom-category-list">
+    <div class="row">
+        {% for category in categories %}
+            <div class="col-sm-6 col-xs-6">
+                <a href="{{ category.href }}" class="custom-category" title="{{ category.name }}">
+                    {% if category.image %}
+                        <img src="{{ category.image }}" alt="onparts.kz-{{ category.name }}" class="img-fluid">
+                    {% else %}
+                        <span>{{ category.name }}</span>
+                    {% endif %}
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

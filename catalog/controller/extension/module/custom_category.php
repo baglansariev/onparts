@@ -55,10 +55,11 @@ class ControllerExtensionModuleCustomCategory extends Controller {
                 'category_id' => $category['category_id'],
                 'name'        => $category['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
                 'children'    => $children_data,
-                'href'        => $this->url->link('product/category', 'path=' . $category['category_id'])
+                'href'        => $this->url->link('product/category', 'path=' . $category['category_id']),
+                'image'        => 'image/' . $category['image']
             );
         }
 
-        return $this->load->view('extension/module/category1', $data);
+        return $this->load->view('extension/module/custom_category', $data);
     }
 }
