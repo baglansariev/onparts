@@ -256,6 +256,7 @@ a:hover{
     flex-direction: column;
 }
 .subcategory-cube {
+    padding: 5px;
     height: 150px;
     display: flex;
     align-items: center;
@@ -263,6 +264,9 @@ a:hover{
     background-color: #fff;
     border: 1px solid #ebebeb;
     margin-bottom: 20px;
+}
+.subcategory-cube img {
+    width: 100%;
 }
 .subcategory-cube span {
     text-align: center;
