@@ -13,6 +13,13 @@ class ControllerCommonHome extends Controller {
 			$this->document->addLink($canonical, 'canonical');
 		}
 
+		$slider_settings = [
+            'banner_id' => 7,
+            'width' => 1140,
+            'height' => 800
+        ];
+
+		$data['main_slider'] = $this->load->controller('extension/module/slideshow', $slider_settings);
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] = $this->load->controller('common/column_right');
 		$data['content_top'] = $this->load->controller('common/content_top');
