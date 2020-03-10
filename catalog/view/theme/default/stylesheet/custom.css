@@ -264,6 +264,7 @@ a:hover{
     background-color: #fff;
     border: 1px solid #ebebeb;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .subcategory-cube img {
     width: 100%;
