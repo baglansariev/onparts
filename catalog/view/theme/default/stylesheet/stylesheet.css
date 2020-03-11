@@ -307,22 +307,22 @@ div.required .control-label:before {
 }
 /* content */
 #content {
-	min-height: 600px;
+	min-height: 633px;
 }
 /* footer */
 footer {
-	margin-top: 30px;
-	padding-top: 30px;
+	padding: 20px;
 	background-color: #303030;
 	border-top: 1px solid #ddd;
 	color: #e2e2e2;
+	font-size: 13px;
 }
 footer hr {
 	border-top: none;
 	border-bottom: 1px solid #666;
 }
 footer a {
-	color: #ccc;
+	color: #FF5A00;
 }
 footer a:hover {
 	color: #fff;

@@ -5,6 +5,7 @@
                 <a href="{{ category.href }}" class="custom-category" title="{{ category.name }}">
                     {% if category.image %}
                         <img src="{{ category.image }}" alt="onparts.kz-{{ category.name }}" class="img-fluid">
+                        <span>{{ category.name }}</span>
                     {% else %}
                         <span>{{ category.name }}</span>
                     {% endif %}

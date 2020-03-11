@@ -1,6 +1,6 @@
 <footer>
-  <div class="container">
-    <!--<div class="row">
+    <div class="container">
+        <!--<div class="row">
       {% if informations %}
       <div class="col-sm-3">
         <h5>{{ text_information }}</h5>
@@ -39,17 +39,14 @@
       </div>
     </div>
     <hr>-->
-    <div class="footer-sign">
-      <p class="owner-sign">{{ powered }}</p>
-      <p class="dev-sign">{{ developed }}</p>
+        <div class="footer-sign">
+            <p class="owner-sign">{{ powered }}</p>
+            <p class="dev-sign">{{ developed }}</p>
+        </div>
     </div>
-  </div>
 </footer>
 {% for script in scripts %}
-<script src="{{ script }}" type="text/javascript"></script>
+    <script src="{{ script }}" type="text/javascript"></script>
 {% endfor %}
-<!--
-OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
-Please donate via PayPal to donate@opencart.com
-//-->
+
 </body></html>
