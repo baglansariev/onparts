@@ -4,3 +4,4 @@ config.php
 admin/config.php
 image
 robots.txt
+php.ini
