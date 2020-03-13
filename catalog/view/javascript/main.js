@@ -5,22 +5,49 @@ $(function () {
         $(this).find('.subcategories-list').fadeOut();
     });
 
-    $('.mobile-menu-toggler').click(function () {
-        $('.mobile-menu-cover').fadeIn();
-    });
-    $('.mobile-menu-close').click(function () {
-        $('.mobile-menu-cover').fadeOut();
+    $('body').click(function (e) {
+        if (e.target !== $('.mobile-category-link')[0] && e.target !== $('.header-category-title')[0]
+            && e.target !== $('.header-category-title p')[0] && e.target !== $('.header-category-title span')[0]
+            && e.target !== $('.header-category-title span i')[0])
+        {
+            menuSwitcher.hide($('.mobile-categories-list'));
+        }
+
+        if (e.target !== $('.mobile-menu-toggler')[0] && e.target !== $('.mobile-menu-toggler i')[0]) {
+            menuSwitcher.hide($('.mobile-menu'));
+        }
     });
 
-    $('.mobile-category-toggler').click(function () {
-        $('.mobile-category-cover').fadeIn();
-    });
-    $('.mobile-category-close').click(function () {
-        $('.mobile-category-cover').fadeOut();
-    });
     $('.phone_mask').mask('+7(999)999-99-99', {autoclear: false});
 
 });
+
+var menuSwitcher = {
+    showClass: 'list-shown',
+    hideClass: 'list-hidden',
+    toggle: function(menu, menu_point) {
+        if ( $(menu).hasClass(this.hideClass) ) {
+            this.show(menu, menu_point);
+        }
+        else {
+            this.hide(menu);
+        }
+    },
+    show: function(menu, menu_point) {
+        $(menu).removeClass(this.hideClass).addClass(this.showClass);
+        let childHeight = $(menu).children(menu_point)[0].offsetHeight;
+        let childCount = $(menu).children().length;
+        $(menu).animate({
+            height: childHeight * childCount,
+        });
+    },
+    hide: function (menu) {
+        $(menu).removeClass(this.showClass).addClass(this.hideClass);
+        $(menu).animate({
+            height: 0,
+        });
+    }
+};
 
 var prod = {
     // mailformat: /^[a-zA-Z]+[0-9]*-*_*\.*[a-zA-Z]*@[a-zA-Z]+-*[0-9]*\.[a-zA-Z]+$/,

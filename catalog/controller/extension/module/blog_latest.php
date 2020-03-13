@@ -47,7 +47,7 @@ class ControllerExtensionModuleBlogLatest extends Controller {
 				);
 			}
 
-			return $this->load->view('extension/module/blog_latest', $data);
+			return $this->load->view('extension/module/blog_latest1', $data);
 		}
 	}
 }

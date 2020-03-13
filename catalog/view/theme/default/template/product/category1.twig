@@ -34,6 +34,7 @@
                                     <a href="{{ category.href }}" class="subcategory-cube" title="{{ category.name }}">
                                         {% if category.image %}
                                             <img src="{{ category.image }}" alt="{{ category.name }}" class="img-fluid">
+                                            <span>{{ category.name }}</span>
                                         {% else %}
                                             <span>{{ category.name }}</span>
                                         {% endif %}
@@ -49,7 +50,8 @@
                                     {% for child in category %}
                                         <a href="{{ child.href }}" class="subcategory-cube" title="{{ child.name }}">
                                             {% if child.image %}
-                                                <img src="{{ child.image }}" alt="{{ child.name }}" class="img-fluid">
+                                                <!--<img src="{{ child.image }}" alt="{{ child.name }}" class="img-fluid">-->
+                                                <span>{{ child.name }}</span>
                                             {% else %}
                                                 <span>{{ child.name }}</span>
                                             {% endif %}
