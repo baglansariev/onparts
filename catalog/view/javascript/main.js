@@ -5,6 +5,10 @@ $(function () {
         $(this).find('.subcategories-list').fadeOut();
     });
 
+    $('.mobile-search').click(function () {
+        $('.search-container').fadeIn();
+    });
+
     $('body').click(function (e) {
         if (e.target !== $('.mobile-category-link')[0] && e.target !== $('.header-category-title')[0]
             && e.target !== $('.header-category-title p')[0] && e.target !== $('.header-category-title span')[0]
@@ -15,6 +19,13 @@ $(function () {
 
         if (e.target !== $('.mobile-menu-toggler')[0] && e.target !== $('.mobile-menu-toggler i')[0]) {
             menuSwitcher.hide($('.mobile-menu'));
+        }
+
+        if (e.target !== $('.mobile-search')[0] && e.target !== $('.mobile-search i')[0]
+            && e.target !== $('#search')[0] && e.target !== $('#searchButton')[0]
+            && e.target !== $('#search input')[0])
+        {
+            $('.search-container').fadeOut();
         }
     });
 

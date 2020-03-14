@@ -20,5 +20,5 @@ $_['text_account']      = 'Личный кабинет';
 $_['text_order']        = 'История заказа';
 $_['text_wishlist']     = 'Закладки';
 $_['text_newsletter']   = 'Рассылка';
-$_['text_powered']      = 'Запчасти на спецтехнику <a target="_blank" href="/">ONPARTS</a>';
+$_['text_powered']      = 'Copyright © 2020 <a target="_blank" href="/">ONPARTS</a>. Все права защищены.';
 $_['text_developed']      = 'Разработка и поддержка сайта <a target="_blank" href="https://starnet.kz/">STARNET.KZ</a>';
