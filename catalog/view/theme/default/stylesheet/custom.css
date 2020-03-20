@@ -196,6 +196,9 @@ a:hover{
     -o-transition: all ease 0.4s;
     transition: all ease 0.4s;
 }
+.custom-category img {
+    width: 100%;
+}
 .custom-category span {
     text-align: center;
     padding: 10px 0;
