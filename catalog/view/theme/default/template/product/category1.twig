@@ -28,37 +28,33 @@
                 <h3>{{ text_refine }}</h3>
                 {% if categories|length <= 5 %}
                     <div class="subcategories-row row">
-                        <div class="col-md-3 col-sm-4 col-xs-6">
-                            <div class="subcategories-grid">
-                                {% for category in categories %}
-                                    <a href="{{ category.href }}" class="subcategory-cube" title="{{ category.name }}">
-                                        {% if category.image %}
-                                            <img src="{{ category.image }}" alt="{{ category.name }}" class="img-fluid">
-                                            <span>{{ category.name }}</span>
-                                        {% else %}
-                                            <span>{{ category.name }}</span>
-                                        {% endif %}
-                                    </a>
-                                {% endfor %}
+                        {% for category in categories %}
+                            <div class="col-md-3 col-sm-4 col-xs-6">
+                                <a href="{{ category.href }}" class="subcategory-cube" title="{{ category.name }}">
+                                    {% if category.image %}
+                                        <!--<img src="{{ category.image }}" alt="{{ category.name }}" class="img-fluid">-->
+                                        <span>{{ category.name }}</span>
+                                    {% else %}
+                                        <span>{{ category.name }}</span>
+                                    {% endif %}
+                                </a>
                             </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 {% else %}
                     <div class="subcategories-row row">{% for category in categories|batch((categories|length / 4)|round(1, 'ceil')) %}
-                            <div class="col-md-3 col-sm-4 col-xs-6">
-                                <div class="subcategories-grid">
-                                    {% for child in category %}
-                                        <a href="{{ child.href }}" class="subcategory-cube" title="{{ child.name }}">
-                                            {% if child.image %}
-                                                <!--<img src="{{ child.image }}" alt="{{ child.name }}" class="img-fluid">-->
-                                                <span>{{ child.name }}</span>
-                                            {% else %}
-                                                <span>{{ child.name }}</span>
-                                            {% endif %}
-                                        </a>
-                                    {% endfor %}
+                            {% for child in category %}
+                                <div class="col-md-3 col-sm-4 col-xs-6">
+                                    <a href="{{ child.href }}" class="subcategory-cube" title="{{ child.name }}">
+                                        {% if child.image %}
+                                            <!--<img src="{{ child.image }}" alt="{{ child.name }}" class="img-fluid">-->
+                                            <span>{{ child.name }}</span>
+                                        {% else %}
+                                            <span>{{ child.name }}</span>
+                                        {% endif %}
+                                    </a>
                                 </div>
-                            </div>
+                            {% endfor %}
                         {% endfor %}</div>
                     <br />
                 {% endif %}
@@ -71,9 +67,9 @@
                             <button type="button" id="grid-view" class="btn btn-default" data-toggle="tooltip" title="{{ button_grid }}"><i class="fa fa-th"></i></button>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
+                    <!--<div class="col-md-3 col-sm-6">
                         <div class="form-group"><a href="{{ compare }}" id="compare-total" class="btn btn-link">{{ text_compare }}</a></div>
-                    </div>
+                    </div>-->
                     <div class="col-md-4 col-xs-6">
                         <div class="form-group input-group input-group-sm">
                             <label class="input-group-addon" for="input-sort">{{ text_sort }}</label>
