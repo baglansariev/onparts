@@ -6,7 +6,8 @@ $(function () {
     });
 
     $('.mobile-search').click(function () {
-        $('.search-container').fadeIn();
+        $('.search-container').addClass('mobile-search-container').fadeIn();
+
     });
 
     $('body').click(function (e) {
@@ -25,7 +26,7 @@ $(function () {
             && e.target !== $('#search')[0] && e.target !== $('#searchButton')[0]
             && e.target !== $('#search input')[0])
         {
-            $('.search-container').fadeOut();
+            $('.mobile-search-container').fadeOut();
         }
     });
     $('body').on('touchend', function (e) {
