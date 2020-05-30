@@ -125,10 +125,4 @@ var prod = {
         }
         return false;
     },
-    // isEmail: function (email) {
-    //     if(email.match(this.mailformat)){
-    //         return true;
-    //     }
-    //     return false;
-    // }
 };

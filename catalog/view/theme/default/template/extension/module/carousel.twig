@@ -1,4 +1,7 @@
-<div class="swiper-viewport">
+{% if title %}
+  <h3 class="row-title featured-title">{{ title }}</h3>
+{% endif %}
+<div class="swiper-viewport" style="margin-bottom: 50px">
   <div id="carousel{{ module }}" class="swiper-container">
     <div class="swiper-wrapper">{% for banner in banners %}
       <div class="swiper-slide text-center">{% if banner.link %}<a href="{{ banner.link }}"><img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" /></a>{% else %}<img src="{{ banner.image }}" alt="{{ banner.title }}" class="img-responsive" />{% endif %}</div>

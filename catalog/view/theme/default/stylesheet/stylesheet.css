@@ -522,7 +522,7 @@ footer h5 {
 .product-thumb {
 	border: 1px solid #ddd;
 	margin-bottom: 20px;
-	overflow: auto;
+	/*overflow: auto;*/
 }
 .product-thumb .image {
 	text-align: center;
